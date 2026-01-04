@@ -65,8 +65,13 @@ export const SEO = ({ postNode, postPath, postSEO, customDescription }) => {
     )
   }
 
+  const canonicalURL = postSEO ? postURL : config.siteUrl
+
   return (
     <Helmet>
+      <html lang="tr" />
+      <link rel="canonical" href={canonicalURL} />
+      
       <meta name="description" content={description} />
       <meta name="image" content={image} />
 
@@ -74,13 +79,18 @@ export const SEO = ({ postNode, postPath, postSEO, customDescription }) => {
         {JSON.stringify(schemaOrgJSONLD)}
       </script>
 
-      <meta property="og:url" content={postSEO ? postURL : config.siteUrl} />
+      <meta property="og:url" content={canonicalURL} />
+      <meta property="og:site_name" content={config.siteTitle} />
+      <meta property="og:locale" content="tr_TR" />
       {postSEO && <meta property="og:type" content="article" />}
+      {!postSEO && <meta property="og:type" content="website" />}
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
 
-      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:site" content="@selametsamli" />
+      <meta name="twitter:creator" content="@selametsamli" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />

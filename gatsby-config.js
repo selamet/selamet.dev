@@ -14,7 +14,34 @@ module.exports = {
     // Meta
     // ===================================================================================
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-netlify',
+    {
+      resolve: 'gatsby-plugin-sitemap',
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                siteUrl
+              }
+            }
+            allSitePage {
+              nodes {
+                path
+              }
+            }
+          }
+        `,
+        serialize: ({ site, allSitePage }) => {
+          return allSitePage.nodes.map((page) => {
+            return {
+              url: site.siteMetadata.siteUrl + page.path,
+              changefreq: 'daily',
+              priority: page.path === '/' ? 1.0 : 0.7,
+            }
+          })
+        },
+      },
+    },
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
