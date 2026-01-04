@@ -32,6 +32,9 @@ module.exports = {
           }
         `,
         serialize: ({ site, allSitePage }) => {
+          if (!allSitePage || !allSitePage.nodes) {
+            return []
+          }
           return allSitePage.nodes.map((page) => {
             return {
               url: site.siteMetadata.siteUrl + page.path,
