@@ -43,10 +43,12 @@ export default function Me() {
 
                 <p>
                   Şu sıralar <a href="https://heybooster.ai" target="_blank" rel="noopener" referrerPolicy="origin" className="link-highlight">heybooster</a>'da{' '}
-                  <strong>Backend Developer</strong> olarak çalışıyorum.
-                  Günlerim sistemleri optimize etmek, sıfırdan ölçeklenebilir
-                  sistemler tasarlamak, performans iyileştirmeleri ve
-                  mimari kararlar almakla geçiyor.
+                  <strong>Software Engineer</strong> olarak çalışıyorum.
+                  Günlerim sıfırdan ölçeklenebilir sistemler tasarlamak,
+                  performans iyileştirmeleri ve mimari kararlar almakla geçiyor.
+                  Bunun yanında <strong>LLM tabanlı ürünler</strong>,
+                  Terraform ile <strong>altyapı yönetimi</strong>, CI/CD ve
+                  observability tarafında da uçtan uca sorumluluk alıyorum.
                 </p>
               </div>
 
@@ -114,51 +116,131 @@ export default function Me() {
             </div>
 
             <div className="tech-category">
+              <h3>AI & LLM</h3>
+              <div className="tech-tags">
+                <span className="tech-tag tech-tag-favorite">Claude API</span>
+                <span className="tech-tag">Gemini (Vertex AI)</span>
+                <span className="tech-tag">LLM Tool Calling</span>
+                <span className="tech-tag">Prompt Caching</span>
+              </div>
+            </div>
+
+            <div className="tech-category">
               <h3>Message Queues & Task Processing</h3>
               <div className="tech-tags">
                 <span className="tech-tag tech-tag-favorite">Celery</span>
                 <span className="tech-tag">Redis</span>
                 <span className="tech-tag">RabbitMQ</span>
                 <span className="tech-tag">AWS SQS</span>
+                <span className="tech-tag">AWS EventBridge</span>
               </div>
             </div>
 
             <div className="tech-category">
-              <h3>Databases</h3>
+              <h3>Databases & Search</h3>
               <div className="tech-tags">
                 <span className="tech-tag tech-tag-favorite">PostgreSQL</span>
                 <span className="tech-tag">MySQL</span>
                 <span className="tech-tag">MongoDB</span>
-                <span className="tech-tag">Elasticsearch</span>
-                <span className="tech-tag">AWS OpenSearch</span>
+                <span className="tech-tag tech-tag-favorite">Elasticsearch</span>
+                <span className="tech-tag">OpenSearch</span>
+                <span className="tech-tag">Kibana</span>
                 <span className="tech-tag">AWS DynamoDB</span>
               </div>
             </div>
 
             <div className="tech-category">
-              <h3>AWS Services</h3>
+              <h3>Cloud</h3>
               <div className="tech-tags">
+                <span className="tech-tag tech-tag-favorite">Azure Container Apps</span>
+                <span className="tech-tag">Azure VMs / VNet / NSG</span>
+                <span className="tech-tag">Azure Blob Storage</span>
+                <span className="tech-tag">Azure Managed Redis</span>
                 <span className="tech-tag">AWS Lambda</span>
-                <span className="tech-tag tech-tag-favorite">AWS ECS</span>
+                <span className="tech-tag">AWS ECS</span>
                 <span className="tech-tag">AWS S3</span>
-                <span className="tech-tag">AWS SQS</span>
-                <span className="tech-tag">AWS OpenSearch</span>
-                <span className="tech-tag">AWS DynamoDB</span>
+                <span className="tech-tag">AWS CloudWatch</span>
+                <span className="tech-tag">AWS CodePipeline</span>
+                <span className="tech-tag">Google Compute Engine</span>
               </div>
             </div>
 
             <div className="tech-category">
-              <h3>Infrastructure & Architecture</h3>
+              <h3>DevOps & Observability</h3>
               <div className="tech-tags">
                 <span className="tech-tag tech-tag-favorite">Docker</span>
-                <span className="tech-tag tech-tag-favorite">Git</span>
-                <span className="tech-tag">Event-driven Architecture</span>
-                <span className="tech-tag">Distributed Systems</span>
-                <span className="tech-tag">Query Optimization</span>
-                <span className="tech-tag">Caching</span>
-                <span className="tech-tag">Logging & Monitoring</span>
+                <span className="tech-tag tech-tag-favorite">Terraform</span>
+                <span className="tech-tag">GitHub Actions</span>
+                <span className="tech-tag">CI/CD</span>
+                <span className="tech-tag">Nginx</span>
+                <span className="tech-tag">Linux</span>
+                <span className="tech-tag">Elastic APM</span>
+                <span className="tech-tag">Sentry</span>
+                <span className="tech-tag">Git</span>
               </div>
             </div>
+
+            <div className="tech-category">
+              <h3>Architecture & Other</h3>
+              <div className="tech-tags">
+                <span className="tech-tag">REST API Design</span>
+                <span className="tech-tag">Event-driven Architecture</span>
+                <span className="tech-tag">Distributed Systems</span>
+                <span className="tech-tag">Serverless</span>
+                <span className="tech-tag">OAuth 2.0</span>
+                <span className="tech-tag">Stripe</span>
+                <span className="tech-tag">Query Optimization</span>
+                <span className="tech-tag">Caching</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="section-about">
+          <h2>Projeler</h2>
+          <div className="project-list">
+            <a
+              href="https://fislik.selamet.dev"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="project-card"
+            >
+              <h3>Fişlik</h3>
+              <p>
+                Küçük işletmeler ile muhasebecileri arasında fiş fotoğrafı
+                paylaşımı. FastAPI backend, Gemini ile fiş okuma, admin
+                paneli, aylık kredi sistemi ve kurulabilir PWA arayüz.
+              </p>
+              <span className="project-link">fislik.selamet.dev</span>
+            </a>
+            <a
+              href="https://github.com/selamet/pretty-lush"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="project-card"
+            >
+              <h3>pretty-lush</h3>
+              <p>
+                Tarayıcı içinde çalışan, 12 dil destekli kod formatlayıcı
+                (Prettier, Ruff, sql-formatter). Şifreli snippet paylaşımı,
+                JSONPath, JWT decoder ve çevrimdışı PWA. Kod sekmeden dışarı çıkmaz.
+              </p>
+              <span className="project-link">github.com/selamet/pretty-lush</span>
+            </a>
+            <a
+              href="https://github.com/selamet/letsraffle-api"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="project-card"
+            >
+              <h3>letsraffle</h3>
+              <p>
+                Anında sonuç üreten basit ve güvenli çekiliş platformu.
+                FastAPI REST API, Celery/Redis görev kuyrukları ve
+                Docker ile dağıtım.
+              </p>
+              <span className="project-link">github.com/selamet/letsraffle-api</span>
+            </a>
           </div>
         </section>
 

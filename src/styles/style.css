@@ -1293,6 +1293,56 @@ a.navbar-icon {
     margin-top: 1.5rem;
   }
 
+  .project-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 1.5rem;
+
+    @media screen and (min-width: 700px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .project-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1.25rem;
+    background: var(--color-background-card);
+    border: 1px solid var(--color-border-card);
+    border-radius: var(--border-radius);
+    color: var(--color-text);
+    text-decoration: none;
+    transition: all 0.2s ease;
+
+    h3 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin: 0;
+      color: var(--color-text-emphasized);
+    }
+
+    p {
+      font-size: 0.9rem;
+      line-height: 1.5;
+      margin: 0;
+      flex: 1;
+    }
+
+    .project-link {
+      font-size: 0.8rem;
+      color: var(--color-primary);
+      word-break: break-all;
+    }
+
+    &:hover {
+      border-color: var(--color-primary);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+  }
+
   .tech-category {
     h3 {
       font-size: 1rem;
